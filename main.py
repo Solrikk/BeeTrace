@@ -1,4 +1,5 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException, Request
+from fastapi.staticfiles import StaticFiles
 import os
 
 os.environ["OPENCV_IO_ENABLE_GDAL"] = "1"
@@ -23,6 +24,7 @@ app.add_middleware(
 )
 
 templates = Jinja2Templates(directory="templates")
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
 def orb_feature_matching(img1, img2):
@@ -63,23 +65,8 @@ def orb_feature_matching(img1, img2):
 
 
 @app.get("/", response_class=HTMLResponse)
-async def read_root():
-  html_content = """
-    <html>
-        <head>
-            <title>ORB (Oriented FAST and Rotated BRIEF)</title>
-        </head>
-        <body>
-            <h1>Upload two images to match features using ORB</h1>
-            <form action="/match-features/" enctype="multipart/form-data" method="post">
-                <input name="imageA" type="file">
-                <input name="imageB" type="file">
-                <input type="submit">
-            </form>
-        </body>
-    </html>
-    """
-  return HTMLResponse(content=html_content)
+async def read_root(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
 
 
 @app.post("/match-features/")
