@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Feature Matcher</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Image Feature Matcher</h1>
+            <p>Upload two images to find matching features using ORB algorithm</p>
+        </header>
+        
+        <div class="upload-container">
+            <form id="upload-form" action="/match-features/" method="post" enctype="multipart/form-data">
+                <div class="file-inputs">
+                    <div class="file-group">
+                        <label for="imageA">First Image</label>
+                        <input id="imageA" name="imageA" type="file" accept="image/*">
+                        <div class="preview" id="previewA"></div>
+                    </div>
+                    <div class="file-group">
+                        <label for="imageB">Second Image</label>
+                        <input id="imageB" name="imageB" type="file" accept="image/*">
+                        <div class="preview" id="previewB"></div>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Match Features</button>
+            </form>
+        </div>
+        
+        <div id="result" class="result-container"></div>
+    </div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
