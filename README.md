@@ -1,6 +1,19 @@
-# BeeTrace - Image Feature Matching Application
+![Logo](https://github.com/Solrikk/BeeTrace/blob/main/assets/photo/photo_2025-01-11_18-26-53.jpg)
+ 
+<div align="center">
+  <h3>
+    <a href="https://github.com/Solrikk/BeeTrace/blob/main/README.md">✦ English ✦</a> |
+    <a href="https://github.com/Solrikk/BeeTrace/blob/main/docs/readme/README_RU.md">Russian</a> |
+    <a href="https://github.com/Solrikk/BeeTrace/blob/main/docs/readme/README_GE.md">German</a> |
+    <a href="https://github.com/Solrikk/BeeTrace/blob/main/docs/readme//README_JP.md">Japanese</a> |
+    <a href="https://github.com/Solrikk/BeeTrace/blob/main/docs/readme/README_KR.md">Korean</a> |
+    <a href="https://github.com/Solrikk/BeeTrace/blob/main/docs/readme/README_CN.md">Chinese</a>
+  </h3>
+</div>
 
-![BeeTrace Logo](generated-icon.png)
+-----------------
+
+# BeeTrace 🔍
 
 BeeTrace is a web-based application that uses computer vision techniques to detect and match features between pairs of images using the ORB (Oriented FAST and Rotated BRIEF) algorithm.
 
