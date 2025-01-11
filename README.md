@@ -13,7 +13,7 @@
 
 -----------------
 
-# BeeTrace 🔍
+# 🐝 BeeTrace 🔍
 
 BeeTrace is a web-based application that uses computer vision techniques to detect and match features between pairs of images using the ORB (Oriented FAST and Rotated BRIEF) algorithm.
 
